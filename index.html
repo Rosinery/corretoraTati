@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corretora Tatiane Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="img/tc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="image-container">
+        <!-- Imagem de fundo -->
+        <img src="img/casa2.png" alt="Imagem de Fundo" class="background-image">
+        <!-- Texto sobreposto -->
+        <div class="overlay-text">Corretora Tatiane Silva. <br>Referencia em Imóveis Residenciais, Terrenos e Chácaras!</div>
+    </div>
+    <header>
+        <img src="img/st.jpg" alt="Logo" class="logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Alugar</a></li>
+                <li><a href="#">Lançamentos</a></li>
+                <li><a href="#">Quem Sou</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="https://wa.me/5575981363224" target="_blank">
+                <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 30px;"></i>
+            Whatsapp</a>
+            
+            <a href="https://www.instagram.com/corretora_tatyanesilva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" target="_blank">
+                <i class="fa-brands fa-instagram" style="color: #E4405F; font-size: 30px;"></i>
+            Instagram</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Corretora Tatiane Silva</h1>
+            <p>Realizando o sonho da sua casa própria!</p>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <div class="filters">
+
+            <div class="filters">
+                <select id="tipo-imovel">
+                    <option value="">Tipo de Imóvel</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="casa">Casa</option>
+                    <option value="terreno">Terreno</option>
+                    <option value="chacara">Chácara</option>
+                </select>
+                <select id="localizacao">
+                    <option value="">Localização</option>
+                    <option value="feira">Feira de Santana</option>
+                    <option value="mais1">Mais 1</option>
+                    <option value="mais2">Mais 2</option>
+                </select>
+                <select id="transacao">
+                    <option value="">Comprar ou Alugar</option>
+                    <option value="comprar">Comprar</option>
+                    <option value="alugar">Alugar</option>
+                </select>
+                <select id="preco">
+                    <option value="">Selecione um tipo primeiro</option>
+                </select>
+                
+                <button class="search-btn" onclick="filtrarImoveis()">Buscar</button>
+            </div>
+        </div>
+        <!--
+        <div class="imovel" data-tipo="casa" data-localizacao="feira" data-transacao="comprar" data-preco="250-500">
+            <img src="img/casa1.jpg" alt="Casa 1">
+            <h3>Casa Moderna</h3>
+            <p>Localização: Feira de Santana</p>
+            <p>Preço: R$ 300.000</p>
+        </div>
+        
+        <div class="imovel" data-tipo="apartamento" data-localizacao="mais1" data-transacao="alugar" data-preco="100-250">
+            <img src="img/apartamento.jpg" alt="Apartamento">
+            <h3>Apartamento de Luxo</h3>
+            <p>Localização: Mais 1</p>
+            <p>Aluguel: R$ 2.000</p>
+        </div>
+        -->
+
+    </div>
+
+    <footer style="position: relative;">
+            <div class="footer-container">
+            <!-- Lado Direito: Informações do Perfil -->
+            <div class="footer-right">
+                <img src="img/tc.jpg" alt="Corretora" class="profile-pic">
+                <div class="profile-text">
+                    
+                  <p><strong>Corretora Tatiane Silva</strong></p>
+                  <p>Creci: 31439</p>
+                  <p>Horário de Funcionamento:</p>
+                  <p>Seg à Sex: 09h - 18h | Sáb: 09h - 13h</p>
+            </div>
+                
+            </div>
+            <!-- Lado Esquerdo: Fale Conosco -->
+            <div class="footer-left">
+                <div class="footer-links">
+                  <h3>CONTATO</h3>
+                  <ul>
+                    <li><a href="https://wa.me/5575981363224" target="_blank">Faça sua simulação</a></li>
+                  </ul>
+                  <p>
+                    <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+                    (75) 98136-3224
+                  </p>
+                </div>
+              </div>
+            </div>
+        <p class="footer-bottom">&copy; 2025 Corretora Tatiane Silva - Todos os direitos reservados.</p>
+        <a href="https://wa.me/5575981363224" class="whatsapp-button" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </footer>
+</body>
+</html>

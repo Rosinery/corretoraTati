@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: #f2b361;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:#f2b361;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #f2b361;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    color: #f2b361;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social i {
+    margin-right: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    width: 100%;             /* Ocupa 100% da largura da tela */
+    height: 50vh;            /* 50% da altura da viewport */
+    /*background: url('img/casa2.png') no-repeat center center;
+    background-size: cover;*/  /* Mantém a proporção e preenche o container sem distorcer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f2b361;
+    margin-top: 80px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Ocupa 50% da altura da viewport */
+    overflow: hidden; /* Garante que o conteúdo que ultrapassar o contêiner seja ocultado */
+}
+
+/* Estilo para a imagem */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 150vh; /* Ocupa 50% da altura da viewport */
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 30%;
+}
+
+.overlay-text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    bottom: 500px; /* Distância da parte inferior da imagem */
+    transform: translate(-50%, -50%);
+    color: #f2b361;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.filters {
+    background:  #f2b361;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filters select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.search-btn {
+    background-color: #6c411a;
+    color:  #f2b361;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #000000;
+}
+
+.whatsapp-button {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Estilo base do footer */
+footer {
+    background-color: #222;
+    color:  #f2b361;
+    padding: 15px;
+    margin-top: 20px;
+}
+  
+/* Container geral do footer: divide em duas colunas */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+  
+/* Lado Esquerdo: Fale Conosco */
+.footer-left {
+    text-align: left;
+}
+  
+/* Lado Direito: Informações do Perfil */
+.footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Garante que os itens fiquem à direita */
+}
+  
+/* Bloco de texto do perfil: os dados ficam à esquerda da imagem, mas alinhados à direita */
+.profile-text {
+    text-align: right;
+    margin-right: 10px;
+}
+  
+/* Estilo da imagem de perfil: pequena, arredondada e posicionada à direita */
+.profile-pic {
+    width: 80px;      /* Tamanho desejado */
+    height: 75px;
+    border-radius: 45px; /* Deixa a imagem circular */
+}
+  
+/* Estilização dos links (usados no bloco Fale Conosco) */
+.footer-links {
+    margin: 10px;
+    text-align: left;
+}
+  
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.footer-links ul li {
+    margin: 5px 0;
+}
+  
+.footer-links ul li a {
+    text-decoration: none;
+    color: #f2b361;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px; /* Ajuste conforme necessário */
+}
+  
+/* Menu padrão escondido no mobile */
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+/* Media Query para telas pequenas (por exemplo, celulares) */
+@media (max-width: 600px) {
+    .filter-container .filters {
+      flex-direction: column; /* Empilha os elementos verticalmente */
+      align-items: center;
+    }
+    
+    .filter-container .filters select,
+    .filter-container .filters button {
+      max-width: 100%;
+    }
+  }
+  
+/* Esconder menu no mobile por padrão */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
