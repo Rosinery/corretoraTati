@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da tela */
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.home-button {
+    position: fixed; /* Fixa na tela */
+    top: 20px; /* Distância do topo */
+    right: 10px; /* Distância da esquerda */
+    background-color: #f2b361; /* Cor do botão */
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    z-index: 1000; /* Garante que fique acima dos elementos */
+}
+
+.home-button:hover {
+    background-color: #e0a349; /* Efeito hover */
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 768px) {
+    .home-button {
+        font-size: 14px;
+        padding: 8px 12px;
+        top: 20px; /* Ajusta a posição no topo */
+        right: 5px; /* Mantém afastado da borda */
+    }
+}
+
+
+/* 📌 CARROSSEL - Todas as imagens com o mesmo tamanho */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+    gap: 15px;
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 300px; /* Define um tamanho fixo para todas as imagens */
+    height: 400px; /* Define uma altura fixa */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção sem distorcer */
+    border-radius: 10px;
+}
+
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.preco {
+    background: #c76b20;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 📌 RODAPÉ - Ajustado para ficar fixo no rodapé da tela */
+.whatsapp-button {
+    position: absolute;
+    right: 20px;
+    background-color: #25D366;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* 📌 RODAPÉ FIXO */
+footer {
+    background-color: #222;
+    color: #f2b361;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 15px; /* Tamanho de fonte menor */
+}
+
+/* 📌 Estrutura do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;    
+}
+
+.footer-left {
+    text-align: left;
+    font-size: 15px; /* Tamanho de fonte menor */
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text {
+    text-align: right;
+    margin-right: 5px;
+    font-size: 15px; /* Tamanho de fonte menor */
+
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.footer-links {
+    margin: 5px;
+    text-align: left;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 3px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #f2b361;
+    font-size: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+/* 📌 RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: column; /* Empilha os itens em telas menores */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Ocupa quase toda a tela */
+        max-width: 300px; /* Garante que não fique muito grande */
+        height: 400px; /* Mantém o mesmo tamanho fixo */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .profile-text {
+        text-align: center;
+        margin: 0;
+    }
+}

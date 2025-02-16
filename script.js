@@ -35,15 +35,15 @@ function filtrarImoveis() {
 }
 const precos = {
     comprar: [
-        { valor: "ate100", texto: "Até R$ 100.000" },
-        { valor: "100-250", texto: "R$ 100.001 - R$ 250.000" },
-        { valor: "250-500", texto: "R$ 250.001 - R$ 500.000" },
-        { valor: "acima500", texto: "Acima de R$ 500.001" }
+        { valor: "ate100", texto: "Até R$ 200.000,00" },
+        { valor: "100-250", texto: "R$ 200.000,00 - R$ 350.000,00" },
+        { valor: "250-500", texto: "R$ 300.000,00 - R$ 500.000,00" },
+        { valor: "acima500", texto: "Acima de R$ 500.000,00" }
     ],
     alugar: [
-        { valor: "ate1000", texto: "Até R$ 1.000" },
-        { valor: "1000-2000", texto: "R$ 1.001 - R$ 2.000" },
-        { valor: "acima2000", texto: "Acima de R$ 2.001" }
+        { valor: "ate1000", texto: "Até R$ 1.000,00" },
+        { valor: "1000-2000", texto: "R$ 1.000,00 - R$ 2.000,00" },
+        { valor: "acima2000", texto: "Acima de R$ 2.000,00" }
     ]
 };
 function atualizarPreco() {
