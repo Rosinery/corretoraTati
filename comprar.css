@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
-    color: white;
+    color: #f2b361;
     text-align: center;
     display: flex;
     flex-direction: column;

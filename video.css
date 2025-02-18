@@ -1,3 +1,86 @@
+
+.swiper-container {
+    position: relative;
+    padding: 0 60px; /* Dá um espaço para as setas */
+}
+
+.swiper {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px 0;
+    height: 150vh;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1000px;
+}
+
+.swiper-slide video {
+    width: 100%; /* Mantém responsivo */
+    max-width: 350px; /* Reduz o tamanho máximo do vídeo */
+    height: auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    max-width: 300px; /* Ajusta o tamanho máximo */
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #f2b361 !important; /* Cor das setas */
+    font-size: 30px !important;
+    z-index: 10 !important; /* Garante que ficam acima de tudo */
+    visibility: visible !important; /* Torna visíveis */
+    opacity: 1 !important; /* Garante que não estão transparentes */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro para destacar */
+    border-radius: 50%; /* Deixa as setas arredondadas */
+    transition: background 0.3s ease-in-out;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta alinhamento */
+}
+
+
+
+/* Quando o carrossel estiver em tela cheia */
+.image-overlay.active .swiper-button-prev,
+.image-overlay.active .swiper-button-next {
+    display: flex !important; /* Garante que fiquem visíveis */
+    z-index: 9999 !important; /* Mantém acima do overlay */
+}
+
+/* Ajuste para evitar que as setas sumam no modo tela cheia */
+.image-overlay {
+    z-index: 1000 !important; /* Overlay deve estar abaixo das setas */
+}
+
+.swiper-button-prev {
+    left: 10px !important; /* Ajuste de posição */
+    top: 30%;
+}
+
+.swiper-button-next {
+    right: 10px !important; /* Ajuste de posição */
+    top: 30%;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -24,7 +107,7 @@ body {
 .carousel-title {
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: #f2b361;
     font-weight: bold;
     padding: 15px 10px;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
@@ -90,7 +173,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px #f2b361;
     text-align: center;
-    margin-top: 420px;
+    margin-top: 20px;
 }
 
 .descricao h2 {
@@ -329,6 +412,36 @@ footer {
         height: 35vh; /* Reduz altura */
     }
 
+    .swiper-button-prev {
+        left: -80px;
+    }
+
+    .swiper-button-next {
+        right: -80px;
+    }
+
+    /* Ajuste para telas muito pequenas */
+    @media (max-width: 480px) {
+    .swiper-button-prev {
+        left: -100px; /* Move ainda mais para a esquerda */
+    }
+
+    .swiper-button-next {
+        right: -100px; /* Move ainda mais para a direita */
+    }
+    }
+
+    /* 🔹 Ajuste para telas menores */
+    @media (max-width: 1024px) {
+    .swiper-button-prev {
+        left: -50px; /* Afasta mais para a esquerda */
+    }
+
+    .swiper-button-next {
+        right: -50px; /* Afasta mais para a direita */
+    }
+    }   
+
     .carousel-title h1 {
         font-size: 16px;
     }
@@ -339,7 +452,7 @@ footer {
     .back-button {
         font-size: 14px;
         padding: 8px 12px;
-        top: 80px; /* Ajusta a posição no topo */
+        top: 100px; /* Ajusta a posição no topo */
         right: 5px; /* Mantém afastado da borda */
     }
 

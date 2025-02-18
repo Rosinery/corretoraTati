@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóveis a Venda</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="shortcut icon" href="img/tc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="image-overlay">
+        <button class="close-btn">❌ Fechar</button>
+        <button class="nav-btn prev-btn">❮</button>
+        <img src="img/c2.jpg" alt="Imagem ampliada">
+        <button class="nav-btn next-btn">❯</button>
+    </div>
+    <div class="carousel-title">
+        <h1>Casa à venda no Parque Ipê, à 250 metros da Fraga Maia, Feira de Santana/BA! 3 dormitórios para mais conforto, Garagem para 2 carros. Valor: R$ 299.000,00</h1>
+    </div>
+    <button class="back-button" onclick="window.history.back()">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+
+    <!-- Carrossel de Vídeos -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <video poster="img/cs.1.jpg" controls>
+                    <source src="img/v1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video poster="img/cs.1.jpg" controls>
+                    <source src="img/v1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video poster="img/cs.1.jpg" controls>
+                    <source src="img/v1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video poster="img/cs.1.jpg" controls>
+                    <source src="img/v1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video poster="img/cs.1.jpg" controls>
+                    <source src="img/v1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video poster="img/cs.1.jpg" controls>
+                    <source src="img/v1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="video.js"></script>
+
+    <!-- Descrição abaixo do carrossel -->
+    <div class="descricao">
+        <h2>Detalhes do Imóvel <br> Casa fora de condomínio. Pronta para morar.</h2>
+        <p> <i class="fa-solid fa-bed room-icon"></i> 3/4 sendo 1 suíte.<br>
+            <i class="fas fa-door-closed"></i> <!-- Porta fechada (sugestão para closet) --> Closet <br>
+            <i class="fas fa-warehouse"></i> <!-- Ícone de garagem -->
+            <i class="fas fa-car"></i> <i class="fas fa-car"></i> <!-- Dois carros -->Garagem para 2 carros. <br>
+            <i class="fas fa-star"></i> <!-- Ícone de estrela, representa qualidade -->Sala ampla com pé direito alto. <br>
+            <i class="fas fa-kitchen-set"></i> <!-- Cozinha completa --> Cozinha totalmente revestida <br>
+            <i class="fas fa-campground"></i> <!-- Área externa --> Quintal <br>
+            <i class="fas fa-campground"></i> <!-- Área externa --> Beco lateral <br>
+            <i class="fas fa-shower"></i> <!-- Chuveiro --> 2 banheiros
+            <i class="fas fa-th-large"></i> <!-- Ícone representando textura quadrada -->Fachada moderna. <br>
+            <i class="fas fa-th-large"></i> <!-- Ícone representando textura quadrada -->Gesso acartonado. <br>
+            <i class="fas fa-th-large"></i> <!-- Ícone representando textura quadrada -->Acabamento de primeira. <br>
+            <i class="fas fa-th-large"></i> <!-- Ícone representando textura quadrada -->Piso porcelanato. <br>
+            <i class="fas fa-ruler-combined"></i> <!-- Representa medidas e área -->Área construída 86m². <br>
+            <i class="fas fa-ruler-combined"></i> Área do Terreno:150,00M² (5x25 mt). <br>
+            <i class="fas fa-map-marker-alt"></i> <!-- Ícone de marcador de localização -->
+            Localizada em Feira de Santana/BA, Rua nossa senhora de Lourdes, nº 259
+            Bairro: Parque Ipê, Fronteira com Fraga Maia</p>
+        </div>
+
+    <footer style="position: relative;">
+        <div class="footer-container">
+        <!-- Lado Direito: Informações do Perfil -->
+        <div class="footer-right">
+            <img src="img/tc.jpg" alt="Corretora" class="profile-pic">
+            <div class="profile-text">
+                
+              <p><strong>Corretora Tatiane Silva</strong></p>
+              <p>Creci: 31439</p>
+              <p>Horário de Funcionamento:</p>
+              <p>Seg à Sex: 09h - 18h | Sáb: 09h - 13h</p>
+        </div>
+            
+        </div>
+        <!-- Lado Esquerdo: Fale Conosco -->
+        <div class="footer-left">
+            <div class="footer-links">
+              <h3>CONTATO</h3>
+              <ul>
+                <li><a href="https://wa.me/5575981363224" target="_blank">Faça sua simulação</a></li>
+              </ul>
+              <p>
+                <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+                (75) 98136-3224
+              </p>
+            </div>
+          </div>
+        </div>
+    <p class="footer-bottom">&copy; 2025 Corretora Tatiane Silva - Todos os direitos reservados.</p>
+    <a href="https://wa.me/5575981363224" class="whatsapp-button" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</footer>
+</body>
+</html>

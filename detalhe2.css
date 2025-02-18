@@ -24,7 +24,7 @@ body {
 .carousel-title {
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: #f2b361;
     font-weight: bold;
     padding: 15px 10px;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
@@ -339,7 +339,7 @@ footer {
     .back-button {
         font-size: 14px;
         padding: 8px 12px;
-        top: 80px; /* Ajusta a posição no topo */
+        top: 100px; /* Ajusta a posição no topo */
         right: 5px; /* Mantém afastado da borda */
     }
 

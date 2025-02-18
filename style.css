@@ -20,6 +20,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    gap: 10px; /* Ajuste o valor conforme necessário */
     z-index: 1000;
 }
 
@@ -27,6 +28,7 @@ header {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    margin-left: 10px;
 }
 
 .menu {
