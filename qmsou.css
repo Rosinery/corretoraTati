@@ -1,0 +1,250 @@
+/* Reset para evitar margens/padding indesejados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #f2b361;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita barra de rolagem lateral */
+    width: 100%;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.photo {
+    flex: 1;
+    text-align: center;
+}
+
+.photo img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #f2b361;
+}
+
+.text {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.text h1 {
+    color: #f2b361;
+    margin-bottom: 10px;
+}
+
+.text p {
+    color: #f2b361;
+    line-height: 1.5;
+}
+
+.home-button {
+    position: fixed; /* Fixa na tela */
+    top: 30px; /* Distância do topo */
+    right: 20px; /* Distância da esquerda */
+    background-color: #f2b361; /* Cor do botão */
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    z-index: 1000; /* Garante que fique acima dos elementos */
+}
+
+.home-button:hover {
+    background-color: #e0a349; /* Efeito hover */
+}
+
+/* WhatsApp à esquerda */
+.whatsapp-button {
+    position: fixed; /* 🔹 Mantém o botão sempre fixo */
+    bottom: 10px;    /* 🔹 Define a distância do rodapé */
+    right: 20px;      /* 🔹 Mantém alinhado à esquerda */
+    background-color: #25D366;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;   /* 🔹 Garante que fique acima de outros elementos */
+    box-shadow: #f2b361;
+    margin-top: 50px;
+}
+
+/* Estilo base do footer */
+footer {
+    background-color: #222;
+    color: #f2b361;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Container do footer */
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite reorganização em telas menores */
+}
+
+/* Lado esquerdo (WhatsApp) */
+.footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Lado direito (Texto e Imagem) */
+.footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+    width: 33%;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    order: 2; /* Mantém o footer-bottom no final */
+}
+
+.footer-links {
+    text-align: right;
+    margin-right: 15px;
+    order: 1; /* Mantém os links à direita */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 3px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #f2b361;
+    font-size: 15px;
+}
+
+/* Texto ao lado da imagem */
+.profile-text {
+    text-align: left;
+    font-size: 14px;
+    max-width: 250px;
+    margin-left: 10px;
+}
+
+/* Imagem do perfil */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text {
+        padding-left: 0;
+        margin-top: 15px;
+    }
+
+    .home-button {
+        font-size: 14px;
+        padding: 8px 12px;
+        top: 50px; /* Ajusta a posição no topo */
+        right: 25px; /* Mantém afastado da borda */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left{
+        justify-content: center;
+    }
+    .footer-right {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .footer-links {
+        text-align: center;
+        margin: 10px 0;
+    }
+    .whatsapp-button {
+        width: 45px;  /* 🔹 Ajusta o tamanho para telas menores */
+        height: 45px;
+        font-size: 20px;
+        bottom: 15px; /* 🔹 Ajusta a posição */
+        right: 15px;
+    }
+
+    .profile-text {
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text {
+        padding-left: 0;
+        margin-top: 15px;
+    }
+}

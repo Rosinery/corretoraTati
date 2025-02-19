@@ -39,8 +39,20 @@ let currentIndex = 0; // Índice da imagem atual
 // Função para abrir a imagem em tela cheia
 function openImage(index) {
     currentIndex = index;
+
+    // 🔥 Corrige a largura da tela antes de exibir a imagem
+    document.documentElement.style.setProperty('overflow', 'hidden', 'important');
+    document.body.style.setProperty('overflow', 'hidden', 'important');
+
+    // Garante que a imagem seja carregada corretamente
     overlayImage.src = images[currentIndex].src;
-    overlay.classList.add("active");
+
+    setTimeout(() => {
+        overlayImage.style.maxWidth = "90vw";
+        overlayImage.style.maxHeight = "90vh";
+        overlayImage.style.objectFit = "contain";
+        overlay.classList.add("active");
+    }, 50); // Pequeno delay para evitar conflitos de redimensionamento
 }
 
 // Adiciona evento de clique para cada imagem
@@ -51,6 +63,10 @@ images.forEach((img, index) => {
 // Fecha a imagem ao clicar no botão
 closeButton.addEventListener("click", () => {
     overlay.classList.remove("active");
+
+    // 🔧 Libera a rolagem da página ao fechar a imagem
+    document.documentElement.style.removeProperty('overflow');
+    document.body.style.removeProperty('overflow');
 });
 
 // Fecha ao clicar fora da imagem ampliada

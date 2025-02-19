@@ -232,8 +232,9 @@ body {
 }
 
 .whatsapp-button {
-    position: absolute;
-    right: 20px;
+    position: fixed; /* 🔹 Mantém o botão sempre fixo */
+    bottom: 10px;    /* 🔹 Define a distância do rodapé */
+    right: 20px;      /* 🔹 Mantém alinhado à esquerda */
     background-color: #25D366;
     color: black;
     width: 50px;
@@ -244,6 +245,9 @@ body {
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
+    z-index: 1000;   /* 🔹 Garante que fique acima de outros elementos */
+    box-shadow: #f2b361;
+    margin-top: 50px;
 }
 
 /* 📌 RODAPÉ FIXO */
@@ -372,16 +376,7 @@ footer {
         font-size: 16px;
         padding: 8px 12px;
     }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-right {
-        justify-content: center;
-        margin-top: 5px;
-    }
-
+    
     .profile-pic {
         width: 75px;
         height: 75px;
