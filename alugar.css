@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: #f2b361;
@@ -19,6 +19,11 @@ body {
 .titulo{
     text-align: center;
     margin-top: 50px;
+}
+
+img, .container, .text {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -38,7 +43,7 @@ body {
 }
 
 .photo img {
-    width: 300px;
+    width: 400px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px #f2b361;
@@ -57,26 +62,23 @@ body {
 .text p {
     color: #f2b361;
     line-height: 1.5;
+    font-size: 20px;
 }
 
-.home-button {
-    position: fixed; /* Fixa na tela */
-    top: 30px; /* Distância do topo */
-    right: 20px; /* Distância da esquerda */
-    background-color: #f2b361; /* Cor do botão */
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none; /* Remove sublinhado */
+.botao-comprar {
+    color: #f2b361;
     font-weight: bold;
-    z-index: 1000; /* Garante que fique acima dos elementos */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-bottom: 2px solid #f2a541;
+    transition: 0.3s ease-in-out;
+    box-shadow: #f2b361;
 }
 
-.home-button:hover {
-    background-color: #e0a349; /* Efeito hover */
+.botao-comprar:hover {
+    color: #e0a349;
+    border-bottom: 2px solid #f2a541;
+    box-shadow: #f2b361;
 }
 
 .whatsapp-link {
@@ -88,6 +90,26 @@ body {
 
 .whatsapp-link:hover {
     color: #1da851;
+}
+
+.home-button {
+    position: fixed; /* Fixa na tela */
+    top: 30px; /* Distância do topo */
+    right: 20px; /* Distância da esquerda */
+    background-color: #f2b361; /* Cor do botão */
+    color: black;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    z-index: 1000; /* Garante que fique acima dos elementos */
+}
+
+.home-button:hover {
+    background-color: #e0a349; /* Efeito hover */
 }
 
 /* WhatsApp à esquerda */
@@ -108,6 +130,7 @@ body {
     z-index: 1000;   /* 🔹 Garante que fique acima de outros elementos */
     box-shadow: #f2b361;
     margin-top: 50px;
+    max-width: 90px;
 }
 
 /* Estilo base do footer */
@@ -128,7 +151,7 @@ footer {
 /* Container do footer */
 .footer-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -141,6 +164,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap; /* Permite reorganização em telas menores */
+    max-width: 100%;
 }
 
 /* Lado direito (Texto e Imagem) */
@@ -150,6 +175,8 @@ footer {
     justify-content: flex-end;
     margin-right: 15px;
     width: 33%;
+    flex-wrap: wrap; /* Permite reorganização em telas menores */
+    max-width: 100%;
 }
 
 .footer-bottom {
@@ -163,6 +190,8 @@ footer {
     text-align: right;
     margin-right: 15px;
     order: 1; /* Mantém os links à direita */
+    flex-wrap: wrap; /* Permite reorganização em telas menores */
+    max-width: 100%;
 }
 
 .footer-links ul {

@@ -7,32 +7,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 function filtrarImoveis() {
     const tipo = document.getElementById("tipo-imovel").value;
     const localizacao = document.getElementById("localizacao").value;
     const transacao = document.getElementById("transacao").value;
     const preco = document.getElementById("preco").value;
-    
+
+    if (!transacao) {
+        alert("Por favor, selecione se deseja comprar ou alugar.");
+        return;
+    }
+
+    // Construir a URL dinâmica com os filtros selecionados
+    let url = transacao + ".html"; // Vai para 'comprar.html' ou 'alugar.html'
+    let params = [];
+
+    if (tipo) params.push(`tipo=${tipo}`);
+    if (localizacao) params.push(`localizacao=${localizacao}`);
+    if (preco) params.push(`preco=${preco}`);
+
+    if (params.length > 0) {
+        url += "?" + params.join("&"); // Adiciona os parâmetros à URL
+    }
+
+    // Redireciona para a página correspondente com os filtros aplicados
+    window.location.href = url;
+}
+
+function aplicarFiltros() {
+    const params = new URLSearchParams(window.location.search);
+
+    const tipo = params.get("tipo");
+    const localizacao = params.get("localizacao");
+    const preco = params.get("preco");
+
     const imoveis = document.querySelectorAll(".imovel");
 
     imoveis.forEach(imovel => {
         const tipoImovel = imovel.getAttribute("data-tipo");
         const localizacaoImovel = imovel.getAttribute("data-localizacao");
-        const transacaoImovel = imovel.getAttribute("data-transacao");
         const precoImovel = imovel.getAttribute("data-preco");
 
         if (
-            (tipo === "" || tipo === tipoImovel) &&
-            (localizacao === "" || localizacao === localizacaoImovel) &&
-            (transacao === "" || transacao === transacaoImovel) &&
-            (preco === "" || preco === precoImovel)
+            (!tipo || tipo === tipoImovel) &&
+            (!localizacao || localizacao === localizacaoImovel) &&
+            (!preco || preco === precoImovel)
         ) {
-            imovel.style.display = "block"; // Exibir imóveis que correspondem ao filtro
+            imovel.style.display = "block"; // Exibir imóvel
         } else {
-            imovel.style.display = "none"; // Esconder os imóveis que não correspondem
+            imovel.style.display = "none"; // Ocultar imóvel
         }
     });
 }
+
+// Chamar a função ao carregar a página
+window.onload = aplicarFiltros;
+
 const precos = {
     comprar: [
         { valor: "ate100", texto: "Até R$ 200.000,00" },
